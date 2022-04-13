@@ -12,7 +12,7 @@ pipeline{
                     withSonarQubeEnv(credentialsId: 'sonarpwd') {
                         sh "chmod +x gradlew"
                         sh "java -version"
-                        sh "./gradlew clean sonarqube"
+                        sh "./gradlew sonarqube --warning-mode all"
                     }
                 }
             }
